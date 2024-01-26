@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/', methods=['POST', 'GET'])
 def handle_requests():
     if request.method == 'POST':
-        subprocess.Popen(['python', 'stress_cpu.py'])
+        subprocess.Popen(['python3', 'stress_cpu.py'])
         return jsonify({'message': 'CPU stress initiated'})
 
     elif request.method == 'GET':
